@@ -10,13 +10,11 @@ import com.niemiec.chat.objects.Client;
 import javafx.application.Platform;
 
 public class ProcessingIncomingBattleshipGameMessage {
-	private Client client;
 	private String nick;
 	private BattleshipGamesManager battleshipGamesManager;
 	private BattleshipManagement battleshipManagement;
 	
-	public ProcessingIncomingBattleshipGameMessage(Client client, BattleshipGamesManager battleshipGamesManager, BattleshipManagement battleshipManagement) {
-		this.client = client;
+	public ProcessingIncomingBattleshipGameMessage(BattleshipGamesManager battleshipGamesManager, BattleshipManagement battleshipManagement) {
 		this.battleshipGamesManager = battleshipGamesManager;
 		this.battleshipManagement = battleshipManagement;
 	}
@@ -29,7 +27,7 @@ public class ProcessingIncomingBattleshipGameMessage {
 		String opponentPlayerNick = battleshipGame.getOpponentPlayerNick();
 		if (checkIfTheGameNotExist(battleshipGame)) {
 			deleteBattleshipGameIfExsistInformationController(opponentPlayerNick);
-			BattleshipView battleshipView = new BattleshipView(opponentPlayerNick, client, battleshipManagement);
+			BattleshipView battleshipView = new BattleshipView(opponentPlayerNick, battleshipManagement);
 			battleshipGamesManager.addBattleshipGame(battleshipGame, battleshipView);
 			battleshipView.showAcceptanceWindow();
 		} else {

@@ -10,21 +10,20 @@ import com.niemiec.battleship.game.objects.PlayerImpl;
 import com.niemiec.battleship.manager.BattleshipGame;
 import com.niemiec.battleship.manager.BattleshipGamesManager;
 import com.niemiec.battleship.view.BattleshipView;
+import com.niemiec.chat.messages.game.GameMessage;
 import com.niemiec.chat.objects.Client;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 
-public class BattleshipManagement {
-	private Client client;
+public class BattleshipManagement implements GameMessage {
 	private BattleshipGamesManager battleshipGamesManager;
 	private ProcessingIncomingBattleshipGameMessage processingIncomingBattleshipGameMessage;
 
-	public BattleshipManagement(Client client) {
-		this.client = client;
+	public BattleshipManagement() {
 		this.battleshipGamesManager = new BattleshipGamesManager();
-		this.processingIncomingBattleshipGameMessage = new ProcessingIncomingBattleshipGameMessage(client, battleshipGamesManager, this);
+		this.processingIncomingBattleshipGameMessage = new ProcessingIncomingBattleshipGameMessage(battleshipGamesManager, this);
 	}
 
 	public void receiveBattleshipGame(BattleshipGame battleshipGame) {
