@@ -28,6 +28,7 @@ public class GeneralChatView {
 			loadFXMLLoader();
 			updateGetNickController();
 			view();
+			addCloseOption();
 		});
 	}
 
@@ -52,6 +53,10 @@ public class GeneralChatView {
 		stage.setTitle("Chat");
 		stage.sizeToScene();
 		stage.show();
+	}
+
+	private void addCloseOption() {
+		stage.setOnCloseRequest(e -> generalChatController.exit());
 	}
 
 	public void close() {

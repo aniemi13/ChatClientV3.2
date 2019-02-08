@@ -20,6 +20,7 @@ public class Chat {
 		chatView = new ChatView(dispatcherOfOutgoingRequest);
 		chatData.setChatView(chatView);
 		chatData.setConnection(connection);
+		chatData.setDispatcherOfOutgoingRequest(dispatcherOfOutgoingRequest);
 	}
 	
 	private void createConnection() {

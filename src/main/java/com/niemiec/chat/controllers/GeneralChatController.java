@@ -3,9 +3,11 @@ package com.niemiec.chat.controllers;
 import java.util.ArrayList;
 
 import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
+import com.niemiec.chat.messages.condition.ExitMessage;
 import com.niemiec.chat.messages.text.GroupMessage;
 import com.niemiec.chat.messages.text.PrivateMessage;
 import com.niemiec.chat.options.classes.UpdaterActualInterlocutor;
+import com.niemiec.games.battleship.manager.BattleshipGame;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -92,7 +94,7 @@ public class GeneralChatController {
 
 	@FXML
 	void suggestAGame() {
-//		client.playBattleships();
+		dispatcherOfOutgoingRequest.setTheCommand(new BattleshipGame());
 	}
 
 	public ArrayList<String> getUsersList(ObservableList<String> obs) {
@@ -158,7 +160,7 @@ public class GeneralChatController {
 
 	@FXML
 	public void exit() {
-//		System.exit(-1);
+		dispatcherOfOutgoingRequest.setTheCommand(new ExitMessage());
 	}
 
 	public void setDisDispatcherOfOutgoingMessages(DispatcherOfOutgoingRequest dispatcherOfOutgoingRequest) {

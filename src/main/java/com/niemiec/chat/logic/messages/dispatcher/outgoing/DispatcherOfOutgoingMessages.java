@@ -20,7 +20,7 @@ public class DispatcherOfOutgoingMessages {
 		if (object instanceof TextMessage) {
 			dispatcherOfOutgoingTextMessages.setTheCommand(object);
 		} else if (object instanceof GameMessage) {
-			
+			dispatcherOfOutgoingGameMessages.setTheCommand(object);
 		} else if (object instanceof ConditionMessage) {
 			dispatcherOfOutgoingConditionMessages.setTheCommand(object);
 		}

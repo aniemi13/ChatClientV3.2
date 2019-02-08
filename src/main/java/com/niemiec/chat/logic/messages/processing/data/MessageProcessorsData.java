@@ -2,6 +2,7 @@ package com.niemiec.chat.logic.messages.processing.data;
 
 import com.niemiec.chat.data.ChatData;
 import com.niemiec.chat.logic.messages.processing.CheckNickMessageProcessor;
+import com.niemiec.chat.logic.messages.processing.ExitMessageProcessor;
 import com.niemiec.chat.logic.messages.processing.GroupChatMessageProcessor;
 import com.niemiec.chat.logic.messages.processing.PrivateMessageProcessor;
 import com.niemiec.chat.logic.messages.processing.UsersListMessageProcessor;
@@ -12,6 +13,7 @@ public class MessageProcessorsData {
 	private GroupChatMessageProcessor groupChatMessageProcessor;
 	private UsersListMessageProcessor usersListMessageProcessor;
 	private PrivateMessageProcessor privateMessageProcessor;
+	private ExitMessageProcessor exitMessageProcessor;
 
 	public MessageProcessorsData(ChatData chatData) {
 		this.chatData = chatData;
@@ -43,6 +45,13 @@ public class MessageProcessorsData {
 			privateMessageProcessor = new PrivateMessageProcessor(chatData);
 		}
 		return privateMessageProcessor;
+	}
+
+	public ExitMessageProcessor getExitMessageProcessor() {
+		if (exitMessageProcessor == null) {
+			exitMessageProcessor = new ExitMessageProcessor(chatData);
+		}
+		return exitMessageProcessor;
 	}
 	
 	

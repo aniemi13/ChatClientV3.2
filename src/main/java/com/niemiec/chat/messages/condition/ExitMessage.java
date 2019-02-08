@@ -6,11 +6,14 @@ import java.io.Serializable;
 public class ExitMessage implements Serializable, ConditionMessage {
 	private String nick;
 	
-	public ExitMessage(String nick) {
-		this.nick = nick;
+	public ExitMessage() {
 	}
 
 	public String getNick() {
 		return nick;
+	}
+
+	public void setNick(String nick) {
+		this.nick = nick;
 	}
 }

@@ -16,7 +16,7 @@ public class DispatcherOfOutgoingConditionMessages {
 		if (object instanceof CheckNickMessage) {
 			messageProcessorsData.getCheckNickMessageProcessor().setTheCommandCheckNick(object);
 		} else if (object instanceof ExitMessage) {
-			
+			messageProcessorsData.getExitMessageProcessor().setTheCommandExit(object);
 		}
 	}
 }
