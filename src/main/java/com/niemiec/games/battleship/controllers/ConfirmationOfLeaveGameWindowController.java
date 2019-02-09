@@ -1,7 +1,7 @@
 package com.niemiec.games.battleship.controllers;
 
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
-import com.niemiec.games.battleship.command.game.GiveUp;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
+import com.niemiec.games.battleship.command.order.game.GiveUp;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

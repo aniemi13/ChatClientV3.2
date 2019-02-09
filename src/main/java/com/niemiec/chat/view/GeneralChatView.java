@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 import com.niemiec.chat.controllers.GeneralChatController;
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
 
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
@@ -106,5 +106,13 @@ public class GeneralChatView {
 
 	public void clearTextAreaPrivateChat() {
 		generalChatController.getTextAreaPrivateChat().clear();
+	}
+
+	public void blockAllChat() {
+		generalChatController.blockAllChat();
+	}
+
+	public void unblockAllChat() {
+		generalChatController.unblockAllChat();
 	}
 }

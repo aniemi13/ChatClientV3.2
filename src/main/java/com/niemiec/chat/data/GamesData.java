@@ -1,6 +1,6 @@
 package com.niemiec.chat.data;
 
-import com.niemiec.games.battleship.logic.BattleshipData;
+import com.niemiec.games.battleship.data.BattleshipData;
 
 public class GamesData {
 	private BattleshipData battleshipData;

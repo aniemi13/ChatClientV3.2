@@ -3,7 +3,7 @@ package com.niemiec.chat.connection;
 import java.io.IOException;
 import java.net.Socket;
 
-import com.niemiec.chat.logic.dispatchers.DispatcherOfIncomingRequest;
+import com.niemiec.chat.dispatchers.general.DispatcherOfIncomingRequest;
 
 public class Connection extends Thread {
 	private DispatcherOfIncomingRequest dispatcherOfIncomingRequest;

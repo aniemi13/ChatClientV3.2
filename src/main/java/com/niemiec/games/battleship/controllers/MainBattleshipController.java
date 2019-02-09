@@ -1,9 +1,9 @@
 package com.niemiec.games.battleship.controllers;
 
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
-import com.niemiec.games.battleship.command.game.ShipsAdder;
-import com.niemiec.games.battleship.command.game.ShooterMovement;
-import com.niemiec.games.battleship.command.options.CloseBattleshipWindow;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
+import com.niemiec.games.battleship.command.order.game.ShipsAdder;
+import com.niemiec.games.battleship.command.order.game.ShooterMovement;
+import com.niemiec.games.battleship.command.order.option.CloseBattleshipWindow;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

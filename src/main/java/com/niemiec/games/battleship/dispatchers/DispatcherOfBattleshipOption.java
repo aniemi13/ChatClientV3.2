@@ -1,9 +1,10 @@
 package com.niemiec.games.battleship.dispatchers;
 
 import com.niemiec.chat.data.ChatData;
-import com.niemiec.games.battleship.command.options.CloseBattleshipWindow;
-import com.niemiec.games.battleship.command.options.Exit;
-import com.niemiec.games.battleship.logic.processing.data.BattleshipProcessorData;
+import com.niemiec.games.battleship.command.order.option.CloseBattleshipWindow;
+import com.niemiec.games.battleship.command.order.option.Exit;
+import com.niemiec.games.battleship.command.order.option.ExitAllBattleshipGames;
+import com.niemiec.games.battleship.command.processors.BattleshipProcessorData;
 
 public class DispatcherOfBattleshipOption {
 	private BattleshipProcessorData battleshipProcessorData;
@@ -17,6 +18,8 @@ public class DispatcherOfBattleshipOption {
 			battleshipProcessorData.getCloseBattleshipWindowProcessor().setTheCommand(object);
 		} else if (object instanceof Exit) {
 			battleshipProcessorData.getExitProcessor().setTheCommand(object);
+		} else if (object instanceof ExitAllBattleshipGames) {
+			battleshipProcessorData.getExitAllBattleshipGamesProcessor().setTheCommand(object);
 		}
 	}
 }

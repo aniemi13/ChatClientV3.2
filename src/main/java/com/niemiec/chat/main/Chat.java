@@ -2,8 +2,8 @@ package com.niemiec.chat.main;
 
 import com.niemiec.chat.connection.Connection;
 import com.niemiec.chat.data.ChatData;
-import com.niemiec.chat.logic.dispatchers.DispatcherOfIncomingRequest;
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
+import com.niemiec.chat.dispatchers.general.DispatcherOfIncomingRequest;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
 import com.niemiec.chat.view.ChatView;
 
 public class Chat {

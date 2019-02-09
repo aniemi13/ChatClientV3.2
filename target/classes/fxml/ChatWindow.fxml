@@ -14,7 +14,7 @@
    <children>
       <VBox prefHeight="580.0" prefWidth="1017.0">
          <children>
-            <MenuBar>
+            <MenuBar fx:id="manu">
               <menus>
                 <Menu mnemonicParsing="false" text="Plik">
                   <items>

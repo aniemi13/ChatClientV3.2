@@ -1,14 +1,14 @@
 package com.niemiec.chat.data;
 
+import com.niemiec.chat.command.processors.messages.data.MessageProcessorsData;
+import com.niemiec.chat.command.processors.options.data.OptionChatProcessorData;
 import com.niemiec.chat.connection.Connection;
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
-import com.niemiec.chat.logic.messages.processing.data.MessageProcessorsData;
-import com.niemiec.chat.logic.options.processing.data.OptionChatProcessorData;
-import com.niemiec.chat.objects.GeneralChat;
-import com.niemiec.chat.objects.managers.InterlocutorsManager;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
+import com.niemiec.chat.messages.data.generalchat.GeneralChat;
+import com.niemiec.chat.messages.data.privatechat.InterlocutorsManager;
 import com.niemiec.chat.view.ChatView;
-import com.niemiec.games.battleship.logic.processing.data.BattleshipProcessorData;
-import com.niemiec.games.battleship.manager.BattleshipGamesManager;
+import com.niemiec.games.battleship.command.processors.BattleshipProcessorData;
+import com.niemiec.games.battleship.data.BattleshipGamesManager;
 
 public class ChatData {
 	private Connection connection;

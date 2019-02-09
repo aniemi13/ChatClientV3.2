@@ -3,7 +3,7 @@ package com.niemiec.chat.view;
 import java.io.IOException;
 
 import com.niemiec.chat.controllers.GetNickController;
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
 
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;

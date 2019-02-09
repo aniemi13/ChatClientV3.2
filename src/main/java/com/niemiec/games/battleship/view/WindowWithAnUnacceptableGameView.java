@@ -1,6 +1,6 @@
 package com.niemiec.games.battleship.view;
 
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
 import com.niemiec.games.battleship.controllers.WindowWithAnUnacceptableGameController;
 
 import javafx.application.Platform;

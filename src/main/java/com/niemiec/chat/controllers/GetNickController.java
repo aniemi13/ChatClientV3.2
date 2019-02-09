@@ -1,8 +1,8 @@
 package com.niemiec.chat.controllers;
 
 
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
-import com.niemiec.chat.messages.condition.CheckNickMessage;
+import com.niemiec.chat.command.order.messages.condition.CheckNickMessage;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

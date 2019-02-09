@@ -1,7 +1,7 @@
 package com.niemiec.games.battleship.controllers;
 
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
-import com.niemiec.games.battleship.command.game.AnswerToTheGameProposal;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
+import com.niemiec.games.battleship.command.order.game.AnswerToTheGameProposal;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

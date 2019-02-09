@@ -2,12 +2,12 @@ package com.niemiec.chat.controllers;
 
 import java.util.ArrayList;
 
-import com.niemiec.chat.logic.dispatchers.DispatcherOfOutgoingRequest;
-import com.niemiec.chat.messages.condition.ExitMessage;
-import com.niemiec.chat.messages.text.GroupMessage;
-import com.niemiec.chat.messages.text.PrivateMessage;
-import com.niemiec.chat.options.classes.UpdaterActualInterlocutor;
-import com.niemiec.games.battleship.manager.BattleshipGame;
+import com.niemiec.chat.command.order.messages.text.GroupMessage;
+import com.niemiec.chat.command.order.messages.text.PrivateMessage;
+import com.niemiec.chat.command.order.options.generalchat.ExitGeneralChat;
+import com.niemiec.chat.command.order.options.generalchat.UpdaterActualInterlocutor;
+import com.niemiec.chat.dispatchers.general.DispatcherOfOutgoingRequest;
+import com.niemiec.games.battleship.messages.BattleshipGame;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -15,12 +15,16 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 
 public class GeneralChatController {
+    @FXML
+    private MenuBar manu;
+    
 	@FXML
 	private HBox mainHBox;
 
@@ -160,7 +164,7 @@ public class GeneralChatController {
 
 	@FXML
 	public void exit() {
-		dispatcherOfOutgoingRequest.setTheCommand(new ExitMessage());
+		dispatcherOfOutgoingRequest.setTheCommand(new ExitGeneralChat());
 	}
 
 	public void setDisDispatcherOfOutgoingMessages(DispatcherOfOutgoingRequest dispatcherOfOutgoingRequest) {
@@ -169,5 +173,27 @@ public class GeneralChatController {
 
 	public TextField getTextAreaPrivateChat() {
 		return textAreaPrivateChat;
+	}
+	
+	public void blockAllChat() {
+		manu.setDisable(true);
+		listOfUsersChat.setDisable(true);
+		textAreaPrivateChat.setDisable(true);
+		sendToPrivateChatButton.setDisable(true);
+		suggestAGameButton.setDisable(true);
+		generalChat.setDisable(true);
+		sendToGeneralChatButton.setDisable(true);
+		textAreaGeneralChat.setDisable(true);
+	}
+	
+	public void unblockAllChat() {
+		manu.setDisable(false);
+		listOfUsersChat.setDisable(false);
+		textAreaPrivateChat.setDisable(false);
+		sendToPrivateChatButton.setDisable(false);
+		suggestAGameButton.setDisable(false);
+		generalChat.setDisable(false);
+		sendToGeneralChatButton.setDisable(false);
+		textAreaGeneralChat.setDisable(false);
 	}
 }
